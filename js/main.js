@@ -1,6 +1,7 @@
 /*
- * algoritmo that ask for a person data and show the person data using
- * a table, prompt(), for and/or while loops, if/else statements and
+ * algoritmo that ask for a person data and show the person data and shows
+ * the oldest person in the list.
+ * Using statements: table, prompt(), for and/or while loops, if/else and
  * objects to store the data person.
  */
 
@@ -10,6 +11,8 @@ let nName = String;
 let nAge = Number;
 let person = [];
 let followNext = true;
+let oldPerson = [];
+let personTemp = 0;
 
 while (followNext) {
   nName[i] = prompt(
@@ -17,6 +20,7 @@ while (followNext) {
     "deje en blanco para terminar y ver resultados"
   );
 
+  // INICIO - Condicionales para romper el ciclo While
   if (nName[i] == null || nName[i] == "") {
     followNext = false;
     break;
@@ -30,13 +34,22 @@ while (followNext) {
     followNext = false;
     break;
   }
+  // FIN - Condicionales para romper el ciclo While
 
-  // Creación de objeto persona para almacenar sus datos
+  // Creación object person]
   person[i] = {
     name: nName[i],
     age: nAge[i],
   };
 
+  // creación de algoritmo para determinar la persona con mayor edad
+  if (person[i].age > personTemp) {
+    personTemp = person[i].age;
+    var oldPersonObj = {
+      oldPersonName: person[i].name,
+      oldPersonAge: person[i].age,
+    };
+  }
   i++;
 }
 
@@ -44,3 +57,12 @@ while (followNext) {
 for (let i = 0; i < person.length; i++) {
   console.table(person[i]);
 }
+
+// Mostrando la persona con mayor edad
+console.log(
+  "La persona de mayor edad es: " +
+    oldPersonObj.oldPersonName +
+    " con " +
+    oldPersonObj.oldPersonAge +
+    " años de edad"
+);
