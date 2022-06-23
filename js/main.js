@@ -36,7 +36,7 @@ while (followNext) {
   }
   // FIN - Condicionales para romper el ciclo While
 
-  // Creación object person]
+  // Creación object person
   person[i] = {
     name: nName[i],
     age: nAge[i],
