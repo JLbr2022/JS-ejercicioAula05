@@ -10,7 +10,7 @@
 
 **The following image shows the way to finish the loop loading people data leaving field nName in blank**
 
-![First: FOR cicle. After: While cicle, both counting from 1 to 20](![nameBlankToFinish.jpg](https://github.com/JLbr2022/JS-ejercicioAula05/blob/master/img/nameBlankToFinish.jpg?raw=true)
+![First: FOR cicle. After: While cicle, both counting from 1 to 20](https://github.com/JLbr2022/JS-ejercicioAula05/blob/master/img/nameBlankToFinish.jpg?raw=true)
 
 **The following image shows the way to finish the loop loading people data leaving field nAge in blank**
 
