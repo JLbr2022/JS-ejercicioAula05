@@ -11,7 +11,6 @@ let nName = String;
 let nAge = Number;
 let person = [];
 let followNext = true;
-let oldPerson = [];
 let personTemp = 0;
 
 while (followNext) {
@@ -21,6 +20,7 @@ while (followNext) {
   );
 
   // INICIO - Condicionales para romper el ciclo While
+
   if (nName[i] == null || nName[i] == "") {
     followNext = false;
     break;
@@ -34,6 +34,7 @@ while (followNext) {
     followNext = false;
     break;
   }
+
   // FIN - Condicionales para romper el ciclo While
 
   // Creación object person
@@ -54,15 +55,18 @@ while (followNext) {
 }
 
 // Ciclo FOR para mostrar los datos de la persona en una tabla por consola
-for (let i = 0; i < person.length; i++) {
-  console.table(person[i]);
+if (i > 0) {
+  for (let i = 0; i < person.length; i++) {
+    console.table(person[i]);
+  }
+  // Mostrando la persona con mayor edad
+  console.log(
+    "La persona de mayor edad es: " +
+      oldPersonObj.oldPersonName +
+      " con " +
+      oldPersonObj.oldPersonAge +
+      " años de edad"
+  );
+} else {
+  alert("No hay datos para mostrar");
 }
-
-// Mostrando la persona con mayor edad
-console.log(
-  "La persona de mayor edad es: " +
-    oldPersonObj.oldPersonName +
-    " con " +
-    oldPersonObj.oldPersonAge +
-    " años de edad"
-);
