@@ -1,11 +1,12 @@
 /*
- * algoritmo that ask for a person data and show the person data and shows
- * the oldest person in the list.
- * Using statements: table, prompt(), for and/or while loops, if/else and
- * objects to store the data person.
+ *
+ * JavaScript program which ask for a person data and shows the oldest person in the list.
+ * Using statements: console.table, alert(), prompt(), for and while loops, array, if/else statments and
+ * objects to store all the data person.
  */
 
 // declaración de variables
+
 let i = 0;
 let nName = String;
 let nAge = Number;
@@ -38,12 +39,14 @@ while (followNext) {
   // FIN - Condicionales para romper el ciclo While
 
   // Creación object person
+
   person[i] = {
     name: nName[i],
     age: nAge[i],
   };
 
-  // creación de algoritmo para determinar la persona con mayor edad
+  // Calculando persona con mayor edad
+
   if (person[i].age > personTemp) {
     personTemp = person[i].age;
     var oldPersonObj = {
@@ -55,11 +58,14 @@ while (followNext) {
 }
 
 // Ciclo FOR para mostrar los datos de la persona en una tabla por consola
+
 if (i > 0) {
   for (let i = 0; i < person.length; i++) {
     console.table(person[i]);
   }
-  // Mostrando la persona con mayor edad
+
+  // Persona con mayor edad
+
   console.log(
     "La persona de mayor edad es: " +
       oldPersonObj.oldPersonName +
