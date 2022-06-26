@@ -1,5 +1,4 @@
 /*
- *
  * JavaScript program which ask for a person data and shows the oldest person in the list.
  * Using statements: console.table, alert(), prompt(), for and while loops, array, if/else statments and
  * objects to store all the data person.
