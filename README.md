@@ -1,4 +1,4 @@
-## Ejercicio aula 5
+## Ejercicio aula 5.
 
 ### Hacer un programa en JS que:
 
