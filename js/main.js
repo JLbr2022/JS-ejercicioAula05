@@ -6,6 +6,7 @@
 
 // declaración de variables
 
+let continuar = true;
 let i = 0;
 let nName = String;
 let nAge = Number;
@@ -14,46 +15,33 @@ let followNext = true;
 let personTemp = 0;
 
 while (followNext) {
-  nName[i] = prompt(
-    "Escriba su nombre:",
-    "deje en blanco para terminar y ver resultados"
-  );
+  // Validación: continuación para agregar nuevo registro
+  continuar = confirm("¿Desea agregar otra persona?");
 
-  // INICIO - Condicionales para romper el ciclo While
+  if (continuar) {
+    nName[i] = prompt("Escriba su nombre:");
 
-  if (nName[i] == null || nName[i] == "") {
-    followNext = false;
-    break;
-  }
+    nAge[i] = prompt("Escriba su edad:");
 
-  nAge[i] = Number(
-    prompt("Escriba su edad: ", "deje en blanco para terminar y ver resultados")
-  );
-
-  if (nAge[i] == null || nAge[i] == "") {
-    followNext = false;
-    break;
-  }
-
-  // FIN - Condicionales para romper el ciclo While
-
-  // Creación object person
-
-  person[i] = {
-    name: nName[i],
-    age: nAge[i],
-  };
-
-  // Calculando persona con mayor edad
-
-  if (person[i].age > personTemp) {
-    personTemp = person[i].age;
-    var oldPersonObj = {
-      oldPersonName: person[i].name,
-      oldPersonAge: person[i].age,
+    // Creación object person
+    person[i] = {
+      name: nName[i],
+      age: nAge[i],
     };
+
+    // Calculando persona con mayor edad
+    if (person[i].age > personTemp) {
+      personTemp = person[i].age;
+      var oldPersonObj = {
+        oldPersonName: person[i].name,
+        oldPersonAge: person[i].age,
+      };
+    }
+    i++;
+  } else {
+    followNext = false;
+    break;
   }
-  i++;
 }
 
 // Ciclo FOR para mostrar los datos de la persona en una tabla por consola
