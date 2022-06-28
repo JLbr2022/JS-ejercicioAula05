@@ -6,13 +6,13 @@
 
 // declaración de variables
 
-let continuar = true;
-let i = 0;
-let nName = String;
-let nAge = Number;
-let person = [];
-let followNext = true;
-let personTemp = 0;
+var followNext = true;
+var continuar = true;
+var nName = String;
+var nAge = Number;
+var i = 0;
+var person = [];
+var personTemp = 0;
 
 while (followNext) {
   // Validación: continuación para agregar nuevo registro
@@ -29,7 +29,7 @@ while (followNext) {
       age: nAge[i],
     };
 
-    // Calculando persona con mayor edad
+    // Cálculo, persona con mayor edad
     if (person[i].age > personTemp) {
       personTemp = person[i].age;
       var oldPersonObj = {
@@ -44,14 +44,14 @@ while (followNext) {
   }
 }
 
-// Ciclo FOR para mostrar los datos de la persona en una tabla por consola
+// Mostrando registros en formato de tabla, por cónsola
 
 if (i > 0) {
   for (let i = 0; i < person.length; i++) {
     console.table(person[i]);
   }
 
-  // Persona con mayor edad
+  // Cálculo, persona con mayor edad
 
   console.log(
     "La persona de mayor edad es: " +
